@@ -1,0 +1,10 @@
+Non-blocking periodic function library for the chipKIT platform 
+(Arduino compatible, but will likely need modifications to work)
+
+Version 1.0
+
+by Thor Steingrimsson
+
+contact: derblitzmann@gmail.com
+
+See the Digilent tutorial where this library is created: http://www.digitentinc.com/
