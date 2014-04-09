@@ -15,7 +15,8 @@ Contribution
 
 If you discover a bug, open an issue. If you want to contribute to this library, feel free to create a pull request. 
 
-
+Copyright
+---------
 
 Copyright (c) 2014, Digilent <www.digilentinc.com>
 Contact Digilent for the latest version.
