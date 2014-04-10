@@ -8,12 +8,18 @@ Documentation
 
 There are two examples included which show the basic functionality of this library. This library was created as a 
 tutorial on how to make an Arduino library at [learn.digilentinc.com](http://learn.digilentinc.com/) which will be 
-released in the future once it is ready.
+released in the future once it is ready (likely to be announced on http://blog.digilentinc.com/).
+
+Download
+--------
+You can download the library [here](https://github.com/derblitzmann/Timers/archive/v1.0.zip).
 
 Contribution
 ------------
 
-If you discover a bug, open an issue. If you want to contribute to this library, feel free to create a pull request. 
+If you discover a bug, open an issue. 
+
+If you want to contribute to this library, feel free to create a pull request. 
 
 Copyright
 ---------
