@@ -8,6 +8,9 @@
 // License information is in the header
 #include "Timers.h"
 
+// This will be used to detect timer overflows
+const unsigned int MAX_INT = 0 - 1;
+
 // We don't need to do much in here, but initialize our private variables
 Timers::Timers()
 {
@@ -135,6 +138,23 @@ void Timers::disableTimer(int id)
 	}
 }
 
+void Timers::changePeriod()
+{
+	if(list == NULL){
+		return;
+	}
+	TNODE *curr_node = list;
+	TNODE *next_node;
+	while(curr_node != NULL){
+		next_node = curr_node->next;
+		if(curr_node->id == id){
+			curr_node->period = period;
+			return;
+		}
+		curr_node = next_node;
+	}
+}
+
 void Timers::update()
 {
 	// if the list is empty, then abort
@@ -154,8 +174,9 @@ void Timers::update()
 			}else{
 				curr_time = millis();				
 			}
-			// has enough time passed?
-			if(curr_time >= curr_node->last_time + curr_node->period){
+			// has enough time passed? And have we overflowed?
+			unsigned int future_time = curr_node->last_time + curr_node->period;
+			if((curr_time >= future_time) || ((future_time < curr_node->last_time) && (curr_time >= curr_node->period - (MAX_INT - curr_node->last_time)))){
 				curr_node->function();
 				curr_node->last_time = curr_time;
 			}
