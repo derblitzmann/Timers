@@ -1,7 +1,9 @@
 Non-blocking periodic function library for the chipKIT platform 
 (Arduino compatible, but will likely need modifications to work)
 
-Version 1.0
+Source and new versions on http://github.com/derblitzmann/Timers
+
+Version 1.1
 
 by Thor Steingrimsson
 
