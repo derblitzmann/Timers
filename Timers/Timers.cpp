@@ -52,6 +52,8 @@ int Timers::addTimer(int period, void (*foo)(void), bool micro)
 	new_tnode->en = true;
 	// set the resolution to the input
 	new_tnode->micro = micro;
+	// Set the previous time to 0, since 0 is the start time of the board
+	new_tnode->last_name = 0;
 	// Set the period to the input
 	new_tnode->period = period;
 	// This is the function to execute after at least the period
