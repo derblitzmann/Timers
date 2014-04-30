@@ -90,7 +90,7 @@ class Timers {
 		// void (*foo)(void): a function pointer to the function to call periodically
 		// Returns the id of the timer that was created (so that individual timers can be removed, disabled, 
 		// or enabled). New timers are enabled to run by default.
-		int addTimer(unsigned int period, void (*foo)(void), bool micro = MILLI);
+		int addTimer(unsigned int period, void (*func)(void), bool micro = MILLI);
 		
 		// This method removes a timer with inputted id from the linked list, will fail silently
 		void removeTimer(int id);
@@ -106,6 +106,9 @@ class Timers {
 		
 		// This method changes the resolution of the timer with inputted id, it will fail silently
 		void changeResolution(int id, bool res);
+		
+		// This method changes the function to call for the timer with inputted id.
+		void changeFunction(void (*func)(void));
 		
 		// This function is the heart of this class, since it calls the functions
 		// that are enabled and enough time has elapsed.

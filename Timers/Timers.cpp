@@ -40,7 +40,7 @@ Timers::~Timers()
 }
 
 // This method is how we add new timers to the linked list
-int Timers::addTimer(int period, void (*foo)(void), bool micro)
+int Timers::addTimer(int period, void (*func)(void), bool micro)
 {
 	// allocate memory for the timer
 	TNODE *new_tnode = (TNODE*) malloc(sizeof(TNODE));
@@ -57,7 +57,7 @@ int Timers::addTimer(int period, void (*foo)(void), bool micro)
 	// Set the period to the input
 	new_tnode->period = period;
 	// This is the function to execute after at least the period
-	new_tnode->function = foo;
+	new_tnode->function = func;
 	// We place new timers "on top" of previous timers
 	new_tnode->next = list;
 	// set the id, but increment it first
@@ -168,6 +168,23 @@ void Timers::changeResolution(int id, bool res)
 		next_node = curr_node->next;
 		if(curr_node->id == id){
 			curr_node->micro = res;
+			return;
+		}
+		curr_node = next_node;
+	}
+}
+
+void Timers::changeFunction(int id, void (*func)(void))
+{
+	if(list == NULL){
+		return;
+	}
+	TNODE *curr_node = list;
+	TNODE *next_node;
+	while(curr_node != NULL){
+		next_node = curr_node->next;
+		if(curr_node->id == id){
+			curr_node->function = func;
 			return;
 		}
 		curr_node = next_node;
