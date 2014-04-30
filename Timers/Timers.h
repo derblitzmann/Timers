@@ -104,6 +104,9 @@ class Timers {
 		// This method changes the period of the timer with inputted id, it will fail silently
 		void changePeriod(int id, unsigned int period);
 		
+		// This method changes the resolution of the timer with inputted id, it will fail silently
+		void changeResolution(int id, bool res);
+		
 		// This function is the heart of this class, since it calls the functions
 		// that are enabled and enough time has elapsed.
 		void update();

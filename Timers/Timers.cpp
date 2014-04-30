@@ -157,6 +157,23 @@ void Timers::changePeriod()
 	}
 }
 
+void Timers::changeResolution(int id, bool res)
+{
+	if(list == NULL){
+		return;
+	}
+	TNODE *curr_node = list;
+	TNODE *next_node;
+	while(curr_node != NULL){
+		next_node = curr_node->next;
+		if(curr_node->id == id){
+			curr_node->micro = res;
+			return;
+		}
+		curr_node = next_node;
+	}
+}
+
 void Timers::update()
 {
 	// if the list is empty, then abort
