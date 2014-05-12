@@ -12,7 +12,11 @@ released in the future.
 
 Download
 --------
-You can download the library [here](https://github.com/derblitzmann/Timers/archive/v1.0.zip).
+You can download the library [here](https://github.com/derblitzmann/Timers/archive/v1.1.zip).
+
+Installation
+------------
+This library is installed like any other Arduino or MPIDE library. Place the Timers folder in the libraries folder of your sketchbook (which can be found by looking at your Arduino/MPIDE preferences, hit ctrl+comma or under the file tab).
 
 Contribution
 ------------
