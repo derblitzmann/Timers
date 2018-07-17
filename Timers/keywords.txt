@@ -6,18 +6,18 @@
 # Datatypes (KEYWORD1)
 #######################################
 
-Timers	 KEYWORD1
+Timers	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
 
-update	 KEYWORD2
-addTimer	 KEYWORD2
-removeTimer	 KEYWORD2
-enableTimer	 KEYWORD2
-disableTimer	 KEYWORD2
-changePeriod	 KEYWORD2
+update	KEYWORD2
+addTimer	KEYWORD2
+removeTimer	KEYWORD2
+enableTimer	KEYWORD2
+disableTimer	KEYWORD2
+changePeriod	KEYWORD2
 
 #######################################
 # Instances (KEYWORD2)
@@ -27,5 +27,5 @@ changePeriod	 KEYWORD2
 # Constants (LITERAL1)
 #######################################
 
-MILLI	 LITERAL1
-MICRO	 LITERAL1
+MILLI	LITERAL1
+MICRO	LITERAL1
